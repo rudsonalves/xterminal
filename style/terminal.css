@@ -1,0 +1,124 @@
+.terminal {
+    background-color: #000; /* Fundo preto */
+    border: 1px solid #333; /* Borda cinza escura, mais sutil */
+    border-bottom: none; /* Isso remove a borda inferior. */
+    border-top: 5px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+    border-radius: 10px; /* Bordas mais arredondadas */
+    color: #d1d1d1; /* Cor do texto cinza claro */
+    font-family: 'Courier New', monospace; /* Fonte estilo terminal */
+    line-height: 1.15;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 15px 5px 10px 5px; /* Ajuste no padding se necessário */
+    text-align: left;
+    white-space: pre-wrap;
+    position: relative; /* Para posicionar o cabeçalho do terminal absolutamente */
+}
+
+/* Adiciona três bolinhas coloridas estilo ios */
+.terminal-header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    height: 12px;
+    width: 12px;
+    background-color: #ff5f56; /* Vermelho */
+    border-radius: 50%;
+    box-shadow:
+        16px 0 0 #ffbd2e, /* Amarelo */
+        32px 0 0 #27c93f; /* Verde */
+}
+
+/* Estilo do cabeçalho para Linux */
+.terminal.linux .terminal-header {
+    background-image: url('../assets/terminal_linux.png'); /* Caminho relativo da imagem */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Ajuste o posicionamento conforme necessário */
+    background-size: 50px 25px; /* Ajuste o tamanho conforme necessário */
+}
+
+/* Esconde completamente o pseudo-elemento quando o estilo Linux está ativo */
+.terminal.linux .terminal-header::before {
+    content: none; /* Isso removerá o pseudo-elemento */
+}
+
+
+/* Estilização do cabeçalho do terminal */
+.terminal-header {
+    background-color: #333; /* Cor de fundo do cabeçalho */
+    height: 24px; /* Altura do cabeçalho */
+    border-top-left-radius: 10px; /* Arredondamento para coincidir com o terminal */
+    border-top-right-radius: 10px; /* Arredondamento para coincidir com o terminal */
+    position: absolute; /* Posicionar sobre o terminal */
+    top: 0; /* Alinhar no topo do terminal */
+    left: 0; /* Alinhar à esquerda do terminal */
+    right: 0; /* Alinhar à direita do terminal */
+    display: flex; /* Para alinhar os itens (botões) dentro */
+    align-items: center; /* Centraliza verticalmente os itens dentro do cabeçalho */
+    padding: 0 10px; /* Padding horizontal */
+}
+
+/* Estilização dos botões do terminal (exemplo) */
+.terminal-button {
+    width: 12px; /* Largura do botão */
+    height: 12px; /* Altura do botão */
+    border-radius: 50%; /* Faz o botão ficar redondo */
+    margin-right: 10px; /* Espaço entre os botões */
+    background-color: #ff3b47; /* Cor vermelha para o botão fechar, por exemplo */
+}
+
+.terminal pre,
+.terminal code {
+    margin: 1; /* Remover margens padrão */
+    padding: 0; /* Remover preenchimento padrão, ajuste conforme necessário */
+}
+
+.user-root {
+    color: #ff0000; /* Vermelho para o usuário root */
+}
+
+.user-normal {
+    color: #00ff00; /* Verde para os outros usuários */
+}
+
+.computer {
+    color: #00ff00; /* Verde para o nome do computador */
+}
+
+.cwd {
+    color: #add0ff; /* Azul para o diretório de trabalho */
+}
+
+.terminal code {
+    background-color: #000; /* Fundo preto */
+    color: #ffffff; /* Cor branca para o texto */
+}
+
+.user-root, .user-normal, .computer, .cwd {
+    font-weight: 600; /* Semi-bold para o usuário e computador */
+}
+
+.terminal pre,
+.terminal code {
+    background-color: transparent; /* ou #000 para garantir fundo preto */
+    margin: 0;
+    padding: 0;
+}
+
+.terminal-title {
+    color: #ffffff; /* Cor do texto do título */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o título no cabeçalho */
+    font-size: 0.85em; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: bold; /* Torna o texto em negrito */
+}
