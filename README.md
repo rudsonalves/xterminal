@@ -6,8 +6,6 @@ Donate link: [https://rralves.dev.br](https://rralves.dev.br)
 
 Tags: terminal, cmd, xterm, unix, console, command, linux, ios
 
-Requires at least: 2.5
-
 Requires PHP: 6.0
 
 Tested up to: 6.0
