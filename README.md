@@ -1,13 +1,21 @@
 # xterminal
 
 Contributors: alvesdev
+
 Donate link: [https://rralves.dev.br](https://rralves.dev.br)
+
 Tags: terminal, cmd, xterm, unix, console, command, linux, ios
+
 Requires at least: 2.5
+
 Requires PHP: 6.0
+
 Tested up to: 6.0
+
 Stable tag: 0.2.1
+
 License: GPLv2 or later
+
 License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
 
 XTerminal provides a terminal-like box for embedding terminal commands within pages or posts.
